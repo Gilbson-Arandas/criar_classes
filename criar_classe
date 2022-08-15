@@ -1,0 +1,39 @@
+class Pessoa {
+    constructor(nome, peso, altura) {
+        this.nome = nome;
+        this.peso = peso;
+        this.altura = altura;
+    }
+
+    static totalPessoas = 0;
+
+    registro() {
+        Pessoa.totalPessoas++;
+    }
+
+    mostrarRegistro() {
+        console.log(Pessoa.totalPessoas)
+    }
+}
+
+pessoa1 = new Pessoa('Gilbson', 95, 1.73);
+pessoa2 = new Pessoa('Pedro', 22, 1.02);
+pessoa3 = new Pessoa('Tiago', 14, 0.93);
+
+console.log(pessoa1);
+console.log(pessoa2);
+console.log(pessoa3);
+
+console.log('\nAntes de usar o método registro() nos objetos')
+console.log(`Total de pessoas: ${Pessoa.totalPessoas}`)
+
+pessoa1.registro() // Adiciona + 1 em 'totalPessoas'
+pessoa2.registro() // Adiciona + 1 em 'totalPessoas'
+pessoa3.registro() // Adiciona + 1 em 'totalPessoas'
+
+console.log('\nDepois de usar o método registro() nos objetos')
+console.log(`Total de pessoas: ${Pessoa.totalPessoas}`)
+
+pessoa1.mostrarRegistro()
+pessoa2.mostrarRegistro()
+pessoa3.mostrarRegistro() 
